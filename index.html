@@ -1,198 +1,894 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AigridSolutions - Under Maintenance</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background: linear-gradient(45deg, #1e3c72, #2a5298);
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            color: white;
-            animation: gradientAnimation 6s ease infinite;
-            background-size: 300% 300%;
-            overflow: hidden;
-        }
+    <meta charset="utf-8">
+    <title>AiGridSolutions - Innovating the Future of Technology</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
+    <!-- Favicon -->
+    <link href="img/companylog.png" rel="icon">
 
-        .container {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            width: 90%;
-            max-width: 500px;
-            position: relative;
-            z-index: 2;
-        }
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap"
+        rel="stylesheet">
 
-        .logo {
-            max-width: 100px;
-            border-radius: 50%;
-            margin-bottom: 1rem;
-        }
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
 
-        p {
-            font-size: 1rem;
-            margin-bottom: 2rem;
-        }
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-        #countdown {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-
-        .time-box {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 10px 20px;
-            border-radius: 10px;
-            text-align: center;
-            flex: 1 1 80px;
-            max-width: 100px;
-        }
-
-        .time-box span {
-            display: block;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        .time-box small {
-            display: block;
-            font-size: 0.8rem;
-        }
-
-        .binary-rain {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .binary-rain span {
-            position: absolute;
-            top: -10vh;
-            color: rgba(255, 255, 255, 0.2);
-            font-size: 1rem;
-            animation: fall linear infinite;
-        }
-
-        @keyframes fall {
-            0% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-            100% {
-                transform: translateY(110vh);
-                opacity: 0;
-            }
-        }
-
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 1.5rem;
-            }
-
-            p {
-                font-size: 0.9rem;
-            }
-
-            .time-box {
-                padding: 8px 15px;
-                flex: 1 1 70px;
-            }
-        }
-    </style>
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
-    <div class="binary-rain" id="binaryRain"></div>
-    <div class="container">
-        <img src="https://res.cloudinary.com/dei4jotrk/image/upload/v1736690690/companylog_pcj014.png" alt="AigridSolutions Logo" class="logo">
-        <h1>AigridSolutions is Under Maintenance</h1>
-        <p>We are working hard to bring you a better experience. Our website will be live on <strong>15th January</strong>.</p>
 
-        <div id="countdown">
-            <div class="time-box">
-                <span id="days">0</span>
-                <small>Days</small>
-            </div>
-            <div class="time-box">
-                <span id="hours">0</span>
-                <small>Hours</small>
-            </div>
-            <div class="time-box">
-                <span id="minutes">0</span>
-                <small>Minutes</small>
-            </div>
-            <div class="time-box">
-                <span id="seconds">0</span>
-                <small>Seconds</small>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner"
+            class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
             </div>
         </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0" id="home">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="m-0">AiGridSolutions</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="#about" class="nav-item nav-link">About</a>
+                        <a href="#feature" class="nav-item nav-link">Services</a>
+                        <a href="#pricing" class="nav-item nav-link">Pricing</a>
+                        <a href="#review" class="nav-item nav-link">Review</a>
+                        <a href="#contact" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <a href="#contact"
+                        class="btn btn-primary-gradient rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Start Your
+                        Project</a>
+                </div>
+            </nav>
+
+            <div class="container-xxl bg-primary hero-header">
+                <div class="container px-lg-5">
+                    <div class="row g-5">
+                        <div class="col-lg-8 text-center text-lg-start">
+                            <h1 class="text-white mb-4 animated slideInDown">Building Intelligent Web and App Solutions
+                                to Accelerate Your Digital Transformation</h1>
+                            <p class="text-white pb-3 animated slideInDown">At AI Grid Solutions, we specialize in
+                                developing custom web and mobile applications that leverage the latest in AI technology.
+                                Our expert team delivers innovative, scalable, and high-performance solutions to help
+                                your business grow, streamline processes, and stay ahead in the digital age.</p>
+                            <a href=""
+                                class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill me-3 animated slideInLeft">Read
+                                More</a>
+                            <a href="#contact"
+                                class="btn btn-secondary-gradient py-sm-3 px-4 px-sm-5 rounded-pill animated slideInRight">Contact
+                                Us</a>
+                        </div>
+                        <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp"
+                            data-wow-delay="0.3s">
+                            <div class="owl-carousel screenshot-carousel">
+                                <img class="img-fluid" src="img/web0.webp" alt="">
+                                <img class="img-fluid" src="img/web1.webp" alt="">
+                                <img class="img-fluid" src="img/web2.webp" alt="">
+                                <img class="img-fluid" src="img/web3.webp" alt="">
+                                <img class="img-fluid" src="img/web4.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- About Start -->
+        <div class="container-xxl py-5" id="about">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <h5 class="text-primary-gradient fw-medium">About Us</h5>
+                        <h1 class="mb-4">#1 Choice for Web & App Development Solutions</h1>
+                        <p class="mb-4">At AI Grid Solutions, we are passionate about crafting innovative web and mobile
+                            applications that help businesses grow and succeed in the digital world. As a newly launched
+                            company, we bring fresh perspectives and cutting-edge technologies to create custom
+                            solutions tailored to your unique needs. From responsive websites to advanced AI
+                            integrations, we’re here to build solutions that deliver results.</p>
+                        <h1 class="mb-4">Our Vision:</h1>
+                        <p class="mb-4">To empower businesses through technology, providing high-quality and scalable
+                            digital solutions that drive success.</p>
+                        <div class="row g-4 mb-4">
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="d-flex">
+                                    <i class="fa fa-cogs fa-2x text-primary-gradient flex-shrink-0 mt-1"></i>
+                                    <div class="ms-3">
+                                        <h2 class="mb-0" data-toggle="counter-up">34</h2>
+                                        <p class="text-primary-gradient mb-0"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                                <div class="d-flex">
+                                    <i class="fa fa-comments fa-2x text-secondary-gradient flex-shrink-0 mt-1"></i>
+                                    <div class="ms-3">
+                                        <h2 class="mb-0" data-toggle="counter-up">1234</h2>
+                                        <p class="text-secondary-gradient mb-0">Clients Reviews</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3">Read More</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img class="img-fluid wow fadeInUp" data-wow-delay="0.5s" src="img/about.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Features Start -->
+        <div class="container-xxl py-5" id="feature">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="text-primary-gradient fw-medium">Services</h5>
+                    <h1 class="mb-5">Our Services</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
+                                style="width: 60px; height: 60px;">
+                                <i class="fa fa-eye text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">Custom Web Development</h5>
+                            <p class="m-0">We design and build responsive, high-performance websites tailored to your
+                                business needs. Our team specializes in creating seamless user experiences with the
+                                latest technologies to ensure your website stands out in a competitive market.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
+                                style="width: 60px; height: 60px;">
+                                <i class="fa fa-layer-group text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">Mobile App Developmen</h5>
+                            <p class="m-0">From concept to deployment, we craft intuitive and feature-rich mobile
+                                applications for iOS and Android platforms. Our apps are designed to enhance user
+                                engagement and help your business reach its audience on the go.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
+                                style="width: 60px; height: 60px;">
+                                <i class="fa fa-edit text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">AI & Machine Learning Solutions</h5>
+                            <p class="m-0">Leverage the power of artificial intelligence to optimize your business
+                                operations. We integrate AI and machine learning solutions into your web and mobile
+                                platforms, driving efficiency, data-driven insights, and automation to fuel your growth.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
+                                style="width: 60px; height: 60px;">
+                                <i class="fa fa-shield-alt text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">UI/UX Design</h5>
+                            <p class="m-0">Our creative team focuses on delivering beautiful and intuitive user
+                                interfaces. We ensure that your website or app not only looks great but also provides a
+                                seamless experience, keeping your users engaged and satisfied.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle mb-4"
+                                style="width: 60px; height: 60px;">
+                                <i class="fa fa-cloud text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">Cloud Storage</h5>
+                            <p class="m-0">We provide cloud-based solutions that help businesses scale efficiently and
+                                securely. Our cloud services include data storage, cloud computing, and application
+                                hosting, giving you flexible access to your data and systems from anywhere while
+                                ensuring reliability and security.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="feature-item bg-light rounded p-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle mb-4"
+                                style="width: 60px; height: 60px;">
+                                <i class="fa fa-mobile-alt text-white fs-4"></i>
+                            </div>
+                            <h5 class="mb-3">Website Maintenance & Support</h5>
+                            <p class="m-0">Our job doesn’t end after launch. We offer ongoing maintenance and support
+                                services to ensure your website or application remains secure, up-to-date, and fully
+                                optimized. Our team is always here to provide timely updates, bug fixes, and technical
+                                support whenever you need it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Features End -->
+
+
+        <!-- Screenshot Start -->
+        <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-8 wow fadeInUp" data-wow-delay="0.1s">
+                        <h5 class="text-primary-gradient fw-medium">Screenshot</h5>
+                        <h1 class="mb-4">User-Friendly Interface and Easy-to-Use Solutions</h1>
+                        <p class="mb-4">Our services are designed with simplicity and functionality in mind, ensuring an
+                            effortless experience for businesses looking to scale with modern web and app development
+                            solutions.</p>
+                        <p><i class="fa fa-check text-primary-gradient me-3"></i>Intuitive and clean design to ensure
+                            effortless interaction with your site or app.</p>
+                        <p><i class="fa fa-check text-primary-gradient me-3"></i>Smooth integration with third-party
+                            tools and services for efficient workflows. </p>
+                        <p class="mb-4"><i class="fa fa-check text-primary-gradient me-3"></i>ailored features and
+                            functionality to meet your unique business needs.</p>
+                        <a href="" class="btn btn-primary-gradient py-sm-3 px-4 px-sm-5 rounded-pill mt-3">Read More</a>
+                    </div>
+                    <div class="col-lg-4 d-flex justify-content-center justify-content-lg-end wow fadeInUp"
+                        data-wow-delay="0.3s">
+                        <div class="owl-carousel screenshot-carousel">
+                            <img class="img-fluid" src="img/web0.webp" alt="">
+                            <img class="img-fluid" src="img/web1.webp" alt="">
+                            <img class="img-fluid" src="img/web2.webp" alt="">
+                            <img class="img-fluid" src="img/web3.webp" alt="">
+                            <img class="img-fluid" src="img/web4.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Screenshot End -->
+
+
+        <!-- Process Start -->
+        <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center pb-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="text-primary-gradient fw-medium">How It Works</h5>
+                    <h1 class="mb-5">3 Easy Steps</h1>
+                </div>
+                <div class="row gy-5 gx-4 justify-content-center">
+                    <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+                                style="width: 100px; height: 100px;">
+                                <i class="fa fa-address-card fa-3x text-white"></i>
+                            </div>
+                            <h5 class="mt-4 mb-3">Get In Touch</h5>
+                            <p class="mb-0">Reach out to us through our contact form or schedule a free consultation.
+                                We’ll discuss your project, goals, and how we can help you build your ideal website or
+                                solution.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-secondary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+                                style="width: 100px; height: 100px;">
+                                <i class="fa fa-cog fa-3x text-white"></i>
+                            </div>
+                            <h5 class="mt-4 mb-3">We Design and Develop</h5>
+                            <p class="mb-0">Once we understand your needs, our team starts designing and developing your
+                                custom website or web solution. We’ll keep you updated with regular progress reports and
+                                seek your feedback to ensure everything aligns with your vision.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 text-center pt-4 wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="position-relative bg-light rounded pt-5 pb-4 px-4">
+                            <div class="d-inline-flex align-items-center justify-content-center bg-primary-gradient rounded-circle position-absolute top-0 start-50 translate-middle shadow"
+                                style="width: 100px; height: 100px;">
+                                <i class="fa fa-check fa-3x text-white"></i>
+                            </div>
+                            <h5 class="mt-4 mb-3">Launch & Enjoy</h5>
+                            <p class="mb-0">After the final review and approval, we’ll launch your site. Enjoy the
+                                features and functionality of your new website, and we’re always here for ongoing
+                                support and improvements whenever needed.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Process Start -->
+
+
+        <!-- Download Start -->
+        <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <img class="img-fluid wow fadeInUp" data-wow-delay="0.1s" src="img/logo.png">
+                    </div>
+                    <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <h5 class="text-primary-gradient fw-medium">Stay Connected</h5>
+                        <h1 class="mb-4">Follow Us On Social Media</h1>
+                        <p class="mb-4">Stay updated with the latest trends, insights, and innovations from Aigrid
+                            Solutions. Join our community on social media and discover how we’re shaping the future of
+                            web and app development.</p>
+                        <div class="row g-4">
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.5s">
+                                <a href="https://www.linkedin.com/company/aigrid-solutions/"
+                                    class="d-flex bg-primary-gradient rounded py-3 px-4">
+                                    <i class="fab fa-linkedin-in fa-3x text-white flex-shrink-0"></i>
+                                    <div class="ms-3">
+                                        <p class="text-white mb-0">Follow Us On</p>
+                                        <h5 class="text-white mb-0">Linkdin</h5>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-sm-6 wow fadeIn" data-wow-delay="0.7s">
+                                <a href="https://www.linkedin.com/company/aigrid-solutions/"
+                                    class="d-flex bg-secondary-gradient rounded py-3 px-4">
+                                    <i class="fab fa-instagram fa-3x text-white flex-shrink-0"></i>
+                                    <div class="ms-3">
+                                        <p class="text-white mb-0">Follow Us On</p>
+                                        <h5 class="text-white mb-0">Instagra</h5>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Download End -->
+
+
+        <!-- Pricing Start -->
+        <div class="container-xxl py-5" id="pricing">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="text-primary-gradient fw-medium">Our Services</h5>
+                    <h1 class="mb-5">Choose Your Service Package</h1>
+                </div>
+                <div class="tab-class text-center pricing wow fadeInUp" data-wow-delay="0.1s">
+                    <ul
+                        class="nav nav-pills d-inline-flex justify-content-center bg-primary-gradient rounded-pill mb-5">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="pill" href="#tab-1">Web Development</button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="pill" href="#tab-2">App Development</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content text-start">
+                        <div id="tab-1" class="tab-pane fade show p-0 active">
+                            <div class="row g-4">
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">Starter Web Package</h4>
+                                            <span>Basic Website Development</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top"
+                                                    style="font-size: 22px; line-height: 45px;">$</small>499<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
+                                                    One-time</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>Responsive
+                                                    Design</span><i class="fa fa-check text-primary-gradient pt-1"></i>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-3"><span>SEO
+                                                    Optimized</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Up to 5
+                                                    Pages</span><i class="fa fa-check text-primary-gradient pt-1"></i>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Basic Content
+                                                    Management System (CMS)</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <a href="#contact"
+                                                class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get
+                                                Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded border">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">Advanced Web Package</h4>
+                                            <span>Feature-Rich Website Development</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top"
+                                                    style="font-size: 22px; line-height: 45px;">$</small>999<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
+                                                    One-time</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>Responsive
+                                                    Design</span><i class="fa fa-check text-primary-gradient pt-1"></i>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-3"><span>SEO
+                                                    Optimized</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Up to 15
+                                                    Pages</span><i class="fa fa-check text-primary-gradient pt-1"></i>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-2"><span>Content Management
+                                                    System</span><i class="fa fa-check text-primary-gradient pt-1"></i>
+                                            </div>
+                                            <a href="#contact"
+                                                class="btn btn-secondary-gradient rounded-pill py-2 px-4 mt-4">Get
+                                                Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">Premium Web Package</h4>
+                                            <span>Complete Web Solution</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top"
+                                                    style="font-size: 22px; line-height: 45px;">$</small>1499<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
+                                                    One-time</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>Responsive
+                                                    Design</span><i class="fa fa-check text-primary-gradient pt-1"></i>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-3"><span>SEO
+                                                    Optimized</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Unlimited
+                                                    Pages</span><i class="fa fa-check text-primary-gradient pt-1"></i>
+                                            </div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Custom
+                                                    Development</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <a href="#contact"
+                                                class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get
+                                                Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane fade p-0">
+                            <div class="row g-4">
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">Starter App Package</h4>
+                                            <span>Basic App Development</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top"
+                                                    style="font-size: 22px; line-height: 45px;">$</small>999<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
+                                                    One-time</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>Android</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>User
+                                                    Authentication</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Push
+                                                    Notifications</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+
+                                            <a href="#contact"
+                                                class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get
+                                                Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded border">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">Advanced App Package</h4>
+                                            <span>Feature-Rich App Development</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top"
+                                                    style="font-size: 22px; line-height: 45px;">$</small>1999<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
+                                                    One-time</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>Android</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>User
+                                                    Authentication</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Push
+                                                    Notifications</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Custom
+                                                    Features</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <a href="#contact"
+                                                class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get
+                                                Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="bg-light rounded">
+                                        <div class="border-bottom p-4 mb-4">
+                                            <h4 class="text-primary-gradient mb-1">Premium App Package</h4>
+                                            <span>Full-Stack App Development</span>
+                                        </div>
+                                        <div class="p-4 pt-0">
+                                            <h1 class="mb-3">
+                                                <small class="align-top"
+                                                    style="font-size: 22px; line-height: 45px;">$</small>2999<small
+                                                    class="align-bottom" style="font-size: 16px; line-height: 40px;">/
+                                                    One-time</small>
+                                            </h1>
+                                            <div class="d-flex justify-content-between mb-3"><span>Android</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>User
+                                                    Authentication</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Push
+                                                    Notifications</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <div class="d-flex justify-content-between mb-3"><span>Custom
+                                                    Features</span><i
+                                                    class="fa fa-check text-primary-gradient pt-1"></i></div>
+                                            <a href="#contact"
+                                                class="btn btn-primary-gradient rounded-pill py-2 px-4 mt-4">Get
+                                                Started</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pricing End -->
+
+
+        <!-- Testimonial Start -->
+        <div class="container-xxl py-5" id="review">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="text-primary-gradient fw-medium">Testimonial</h5>
+                    <h1 class="mb-5">What Say Our Clients!</h1>
+                </div>
+                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="testimonial-item rounded p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-1.jpg"
+                                style="width: 85px; height: 85px;">
+                            <div class="ms-4">
+                                <h5 class="mb-1">Client Name</h5>
+                                <p class="mb-1">Profession</p>
+                                <div>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
+                            eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
+                    <div class="testimonial-item rounded p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-2.jpg"
+                                style="width: 85px; height: 85px;">
+                            <div class="ms-4">
+                                <h5 class="mb-1">Client Name</h5>
+                                <p class="mb-1">Profession</p>
+                                <div>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
+                            eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
+                    <div class="testimonial-item rounded p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-3.jpg"
+                                style="width: 85px; height: 85px;">
+                            <div class="ms-4">
+                                <h5 class="mb-1">Client Name</h5>
+                                <p class="mb-1">Profession</p>
+                                <div>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
+                            eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
+                    <div class="testimonial-item rounded p-4">
+                        <div class="d-flex align-items-center mb-4">
+                            <img class="img-fluid bg-white rounded flex-shrink-0 p-1" src="img/testimonial-4.jpg"
+                                style="width: 85px; height: 85px;">
+                            <div class="ms-4">
+                                <h5 class="mb-1">Client Name</h5>
+                                <p class="mb-1">Profession</p>
+                                <div>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                    <small class="fa fa-star text-warning"></small>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam et
+                            eos. Clita erat ipsum et lorem et sit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+
+        <!-- Contact Start -->
+        <!-- Contact Start -->
+        <div class="container-xxl py-5" id="contact">
+            <div class="container py-5 px-lg-5">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="text-primary-gradient fw-medium">Contact Us</h5>
+                    <h1 class="mb-5">Get In Touch!</h1>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-9">
+                        <div class="wow fadeInUp" data-wow-delay="0.3s">
+                            <p class="text-center mb-4"></p>
+                            <form action="https://formspree.io/f/mwppznaa" method="POST" id="contactForm">
+                                <!-- Optional hidden subject field -->
+                                <input type="hidden" name="_subject" value="New Contact Form Submission">
+
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" name="name"
+                                                placeholder="Your Name" required>
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" name="email"
+                                                placeholder="Your Email" required>
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="subject" name="subject"
+                                                placeholder="Subject" required>
+                                            <label for="subject">Subject</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" name="message"
+                                                placeholder="Leave a message here" id="message" style="height: 150px"
+                                                required></textarea>
+                                            <label for="message">Message</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button class="btn btn-primary-gradient rounded-pill py-3 px-5"
+                                            type="submit">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <!-- Success message after form submission -->
+                            <div id="successMessage" class="text-center mt-4" style="display:none;">
+                                <h3>Thank you for your message! We will get back to you shortly.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+
+        <!-- Contact End -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Address</h4>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>Swarnim Business Hub, Ahmedabad, Gujarat, 382470</p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+91 98720 54321</p>
+                        <p><i class="fa fa-envelope me-3"></i>hello@aigridsolutions.com</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social"
+                                href="https://www.linkedin.com/company/aigrid-solutions/" target="_blank"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Quick Link</h4>
+                        <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Privacy Policy</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                        <a class="btn btn-link" href="">Career</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Popular Link</h4>
+                        <a class="btn btn-link" href="">About Us</a>
+                        <a class="btn btn-link" href="">Contact Us</a>
+                        <a class="btn btn-link" href="">Privacy Policy</a>
+                        <a class="btn btn-link" href="">Terms & Condition</a>
+                        <a class="btn btn-link" href="">Career</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h4 class="text-white mb-4">Newsletter</h4>
+                        <p>"Stay ahead with the latest insights. Discover innovative ideas and trends for your
+                            business."</p>
+                        <div class="position-relative w-100 mt-3">
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text"
+                                placeholder="Your Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i
+                                    class="fa fa-paper-plane text-primary-gradient fs-4"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="#">AiGridSolutions</a>, All Right Reserved.
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="">Home</a>
+                                <a href="">Cookies</a>
+                                <a href="">Help</a>
+                                <a href="">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-lg-square back-to-top pt-2"><i class="bi bi-arrow-up text-white"></i></a>
     </div>
 
-    <script>
-        function updateCountdown() {
-            const targetDate = new Date('January 15, 2025 00:00:00').getTime();
-            const now = new Date().getTime();
-            const difference = targetDate - now;
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="https://cdn.formspree.io/js/formspree.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-            if (difference > 0) {
-                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-                document.getElementById('days').textContent = days;
-                document.getElementById('hours').textContent = hours;
-                document.getElementById('minutes').textContent = minutes;
-                document.getElementById('seconds').textContent = seconds;
-            } else {
-                document.querySelector('.container').innerHTML = '<h1>We are live now! 🎉</h1>';
-            }
-        }
-
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-
-        function createBinaryRain() {
-            const binaryRain = document.getElementById('binaryRain');
-            const screenWidth = window.innerWidth;
-            const numberOfDrops = Math.floor(screenWidth / 20);
-
-            for (let i = 0; i < numberOfDrops; i++) {
-                const span = document.createElement('span');
-                span.textContent = Math.random() > 0.5 ? '0' : '1';
-                span.style.left = Math.random() * 100 + 'vw';
-                span.style.animationDuration = Math.random() * 3 + 2 + 's';
-                span.style.animationDelay = Math.random() * 5 + 's';
-                binaryRain.appendChild(span);
-            }
-        }
-
-        createBinaryRain();
-    </script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
+<script>
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+
+        fetch(form.action, {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { 'Accept': 'application/json' }
+        })
+            .then(response => {
+                if (response.ok) {
+                    form.reset(); // Reset the form fields
+                    Swal.fire({
+                        title: "Message Sent!",
+                        icon: "success",
+                        html: "Your message has been successfully sent. Thank you!",
+                        didOpen: () => {
+                            const modal = Swal.getPopup();
+                            modal.style.cursor = "move";
+
+                            let offsetX = 0;
+                            let offsetY = 0;
+                            let isDragging = false;
+
+                            // Add mouse event listeners for draggable behavior
+                            modal.addEventListener("mousedown", (e) => {
+                                isDragging = true;
+                                offsetX = e.clientX - modal.getBoundingClientRect().left;
+                                offsetY = e.clientY - modal.getBoundingClientRect().top;
+                            });
+
+                            document.addEventListener("mousemove", (e) => {
+                                if (isDragging) {
+                                    modal.style.left = `${e.clientX - offsetX}px`;
+                                    modal.style.top = `${e.clientY - offsetY}px`;
+                                    modal.style.position = "absolute";
+                                }
+                            });
+
+                            document.addEventListener("mouseup", () => {
+                                isDragging = false;
+                            });
+                        }
+                    });
+                } else {
+                    Swal.fire({
+                        title: "Submission Error",
+                        icon: "error",
+                        html: "There was an issue with your submission. Please try again.",
+                    });
+                }
+            })
+            .catch(error => {
+                Swal.fire({
+                    title: "Network Error",
+                    icon: "error",
+                    html: "There was a network error. Please try again later.",
+                });
+            });
+    });
+
+</script>
+
 </html>
